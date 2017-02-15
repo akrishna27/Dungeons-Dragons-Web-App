@@ -1,8 +1,9 @@
+import java.util.Random;
 
 public class Character {
 	private boolean PC;//true if PC, false otherwise
 	private boolean hidden;
-	private String name;
+	public String name;
 	private int init;//initiative
 	
 	public Character(String name, boolean PC){
@@ -15,6 +16,12 @@ public class Character {
 		}
 	}
 	
+	public void SetInitiative(int num){
+		init = num;
+	}
 	
+	boolean isHidden(){
+		return hidden;
+	}
 	
 }
