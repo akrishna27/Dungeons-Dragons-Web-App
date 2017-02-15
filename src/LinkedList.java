@@ -10,7 +10,8 @@ public class LinkedList {
 		length = 0;
 	}
 	
-	//insert addSorted method
+	//insert addSorted method according to initiative
+	
 	
 	public void addToFront(Character c, boolean PC){
 		
