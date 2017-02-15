@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class Character {
+public class Character implements Comparable<Character> {
 	private boolean PC;//true if PC, false otherwise
 	private boolean hidden;
 	public String name;
@@ -20,8 +20,27 @@ public class Character {
 		init = num;
 	}
 	
-	boolean isHidden(){
+	public int getInit(){
+		return this.init;
+	}
+	
+	public void reveal(){
+		this.hidden = false;
+	}
+	
+	public boolean isHidden(){
 		return hidden;
+	}
+	
+	@Override//only for initiative atm
+	public int compareTo(Character c) {
+		if(this.getInit() > c.init){
+			return 1;
+		}else if (this.getInit() < c.init){
+			return -1;
+		}else{
+			return 0;
+		}
 	}
 	
 }
